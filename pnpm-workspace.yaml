@@ -1,0 +1,14 @@
+packages:
+  - apps/*
+  - packages/*
+catalog:
+  dotenv: ^17.2.2
+  zod: ^4.1.13
+  typescript: ^6
+  "@types/node": ^22.13.14
+  next-themes: ^0.4.6
+  "@libsql/client": 0.15.15
+  libsql: 0.5.22
+  better-auth: 1.6.9
+  "@types/react-dom": ^19.2.3
+  alchemy: ^0.91.2

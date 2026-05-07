@@ -1,0 +1,24 @@
+{
+  "name": "@happy-tanstack-cf/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@happy-tanstack-cf/db": "workspace:*",
+    "@happy-tanstack-cf/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@happy-tanstack-cf/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

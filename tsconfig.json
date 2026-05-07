@@ -1,0 +1,3 @@
+{
+  "extends": "@happy-tanstack-cf/config/tsconfig.base.json"
+}
