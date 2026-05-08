@@ -14,6 +14,8 @@
 		"db:push": "pnpm --filter @happy-tanstack-cf/db db:push",
 		"db:generate": "pnpm --filter @happy-tanstack-cf/db db:generate",
 		"deploy": "pnpm --filter @happy-tanstack-cf/infra deploy",
+		"release:pre": "pnpm --filter @happy-tanstack-cf/infra release:pre",
+		"release:prod": "pnpm --filter @happy-tanstack-cf/infra release:prod",
 		"destroy": "pnpm --filter @happy-tanstack-cf/infra destroy",
 		"check": "biome check --write .",
 		"prepare": "husky"
