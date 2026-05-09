@@ -19,6 +19,7 @@ export const web = await TanStackStart("web", {
 		BETTER_AUTH_SECRET: alchemy.secret.env.BETTER_AUTH_SECRET!,
 		BETTER_AUTH_URL: alchemy.env.BETTER_AUTH_URL!,
 	},
+	crons: ["* * * * *"], //["0 10 * * *"],
 });
 
 console.log(`Web    -> ${web.url}`);
