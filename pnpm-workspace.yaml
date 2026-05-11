@@ -11,4 +11,4 @@ catalog:
   libsql: 0.5.22
   better-auth: 1.6.9
   "@types/react-dom": ^19.2.3
-  alchemy: ^0.91.2
+  alchemy: ^0.93.7

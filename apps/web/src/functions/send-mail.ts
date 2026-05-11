@@ -1,6 +1,10 @@
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-export async function sendMail() {
-	// TODO: 模拟发送电子邮件
-	await sleep(1000);
-	console.log("电子邮件已发送");
+import { env } from "@happy-tanstack-cf/env/server";
+
+export async function sendMail(to: string) {
+	await env.EMAIL.send({
+		to,
+		from: "noreply@example.com",
+		subject: "测试邮件",
+		html: "<h1>测试邮件内容</h1>",
+	});
 }
