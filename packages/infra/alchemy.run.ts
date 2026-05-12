@@ -5,13 +5,23 @@ import {
 	Queue,
 	TanStackStart,
 } from "alchemy/cloudflare";
+import { CloudflareStateStore } from "alchemy/state";
 import { config } from "dotenv";
 
 config({ path: "./.env" });
 config({ path: "../../apps/web/.env" });
 
 const stage = process.env.STAGE ?? "dev";
-const app = await alchemy("happy-tanstack-cf");
+const app = await alchemy("happy-tanstack-cf", {
+	stage,
+	stateStore:
+		stage !== "dev"
+			? (scope) =>
+					new CloudflareStateStore(scope, {
+						scriptName: `launly-app-state-${stage}`,
+					})
+			: undefined,
+});
 const queueName = `example-queue-${stage}`;
 
 // 处理消息队列配置;
